@@ -134,8 +134,8 @@ If using the ASX-specific paper trading system, these commands are available:
 ### Option 1: Clone and Use Directly
 
 ```bash
-git clone https://github.com/webcoda-sydney/asx-trading-agents.git
-cd asx-trading-agents
+git clone https://github.com/webcoda-sydney/trading-agents.git
+cd trading-agents
 claude
 ```
 
@@ -150,7 +150,7 @@ Then try:
 
 ```bash
 # Add as submodule
-git submodule add https://github.com/webcoda-sydney/asx-trading-agents.git .trading-agents
+git submodule add https://github.com/webcoda-sydney/trading-agents.git .trading-agents
 
 # Copy agents
 cp -r .trading-agents/.claude/agents/* .claude/agents/
@@ -181,7 +181,7 @@ Configure in `config/trading-rules.json`.
 ## Structure
 
 ```
-asx-trading-agents/
+trading-agents/
 ├── .claude/
 │   ├── agents/          # 24 trading agents
 │   └── commands/        # 15 slash commands (optional)

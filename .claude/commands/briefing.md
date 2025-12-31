@@ -2,6 +2,8 @@
 
 Generate a comprehensive morning briefing covering market conditions, portfolio impact, and what to watch today.
 
+**⚠️ IMPORTANT**: Get the current date from the `<env>` block (`Today's date: YYYY-MM-DD`). Do NOT use your internal sense of time - it may be wrong due to training cutoff.
+
 ## Arguments
 - `$ARGUMENTS` - Optional: `quick` for summary, `detailed` for full analysis
 

@@ -2,6 +2,18 @@
 
 Comprehensive AI trading agents for investment analysis, portfolio management, and trading decisions.
 
+## ⚠️ CRITICAL: Date Awareness
+
+**ALWAYS use the date from the `<env>` block in your system context.** The `<env>` block contains `Today's date: YYYY-MM-DD` - this is the ACTUAL current date.
+
+**DO NOT rely on your internal sense of time.** Your training data has a knowledge cutoff that may cause you to believe it's an earlier date (e.g., 2024 when it's actually 2025). This leads to incorrect analysis.
+
+When performing any analysis:
+- Check the `<env>` block for `Today's date`
+- Use this date for all date references, market context, and analysis
+- When fetching data, news, or prices - use the current year from `<env>`
+- State the current date explicitly in market briefings and analysis
+
 ## Agent Teams Summary
 
 ### Analysis Team (5 agents)
@@ -79,15 +91,64 @@ Comprehensive AI trading agents for investment analysis, portfolio management, a
 3. Apply strategy filters (value, growth, momentum, dividend)
 4. Prioritise by conviction score
 
+## Real-Time Data Fetching
+
+Use Python scripts to fetch live market data. **No API keys required** for basic functionality (uses yfinance).
+
+### Quick Commands
+
+```bash
+# Install dependencies (first time only)
+pip install -r scripts/requirements.txt
+
+# Fetch current price and metrics
+python scripts/fetch_price.py AAPL
+
+# Fetch fundamental analysis
+python scripts/fetch_fundamentals.py AAPL
+
+# Fetch technical indicators (RSI, MACD, Bollinger, etc.)
+python scripts/fetch_technicals.py AAPL
+
+# Fetch news with sentiment
+python scripts/fetch_news.py AAPL
+
+# Fetch portfolio valuation
+python scripts/fetch_portfolio.py
+```
+
+### For JSON Output (Programmatic Use)
+
+Add `--json` flag to any script:
+```bash
+python scripts/fetch_price.py AAPL --json
+```
+
+### Enhanced Data (Optional API Keys)
+
+For real-time data and sentiment analysis, configure API keys:
+1. Copy `config/api-keys.example.json` to `config/api-keys.json`
+2. Add your API keys (free tiers available)
+3. Set as environment variables
+
+| Provider | Free Tier | Best For |
+|----------|-----------|----------|
+| Alpha Vantage | 500/day | Technical indicators |
+| Finnhub | 60/min | Real-time + sentiment |
+| Twelve Data | 800/day | Global coverage |
+
 ## Key Data Files
 
 ```
-config/trading-rules.json    # Position limits, stop-loss rules
-config/screening-presets.json # Stock screening criteria
-data/portfolio.json          # Current portfolio state
-data/positions.json          # Current holdings
-data/watchlist.json          # Stocks being monitored
-data/trades.json             # Trade history
+config/trading-rules.json      # Position limits, stop-loss rules
+config/screening-presets.json  # Stock screening criteria
+config/api-keys.json           # API keys (gitignored)
+data/portfolio.json            # Current portfolio state
+data/positions.json            # Current holdings
+data/watchlist.json            # Stocks being monitored
+data/trades.json               # Trade history
+scripts/                       # Data fetching scripts
+.claude/skills/                # Data fetching skills
 ```
 
 ## Standards

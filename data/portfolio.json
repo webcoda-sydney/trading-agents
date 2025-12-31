@@ -1,0 +1,9 @@
+{
+  "name": "Paper Trading Portfolio",
+  "currency": "USD",
+  "created": "2025-01-01T00:00:00Z",
+  "updated": "2025-01-01T00:00:00Z",
+  "initial_capital": 100000.00,
+  "cash": 100000.00,
+  "notes": "Paper trading portfolio for educational purposes"
+}

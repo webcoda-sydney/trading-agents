@@ -136,6 +136,11 @@ If using the ASX-specific paper trading system, these commands are available:
 ```bash
 git clone https://github.com/webcoda-sydney/trading-agents.git
 cd trading-agents
+
+# Install data fetching dependencies (optional but recommended)
+pip install -r scripts/requirements.txt
+
+# Start Claude Code
 claude
 ```
 
@@ -178,19 +183,66 @@ cp .trading-agents/.claude/agents/sentiment-analyst.md .claude/agents/
 
 Configure in `config/trading-rules.json`.
 
+## Real-Time Data
+
+The toolkit includes Python scripts for fetching live market data. **No API keys required** for basic use.
+
+```bash
+# Fetch current price
+python scripts/fetch_price.py AAPL
+
+# Fetch fundamentals (income statement, ratios, etc.)
+python scripts/fetch_fundamentals.py AAPL
+
+# Fetch technical indicators (RSI, MACD, Bollinger, support/resistance)
+python scripts/fetch_technicals.py AAPL
+
+# Fetch news with sentiment analysis
+python scripts/fetch_news.py AAPL
+
+# Fetch portfolio valuation
+python scripts/fetch_portfolio.py
+```
+
+### Optional: Enhanced Data Providers
+
+For real-time streaming and advanced sentiment, configure API keys:
+
+| Provider | Free Tier | Signup |
+|----------|-----------|--------|
+| Alpha Vantage | 500 calls/day | [alphavantage.co](https://www.alphavantage.co/support/#api-key) |
+| Finnhub | 60 calls/min | [finnhub.io](https://finnhub.io/register) |
+| Twelve Data | 800 calls/day | [twelvedata.com](https://twelvedata.com/register) |
+
+Copy `config/api-keys.example.json` to `config/api-keys.json` and add your keys.
+
 ## Structure
 
 ```
 trading-agents/
 ├── .claude/
 │   ├── agents/          # 24 trading agents
-│   └── commands/        # 15 slash commands (optional)
+│   ├── commands/        # 15 slash commands
+│   └── skills/          # Data fetching skills
+├── scripts/             # Python data fetching scripts
+│   ├── fetch_price.py
+│   ├── fetch_fundamentals.py
+│   ├── fetch_technicals.py
+│   ├── fetch_news.py
+│   ├── fetch_portfolio.py
+│   └── requirements.txt
 ├── config/
 │   ├── trading-rules.json      # Position limits, stop-loss rules
 │   ├── screening-presets.json  # Stock screening criteria
+│   ├── api-keys.example.json   # API key template
 │   ├── alerts.json             # Alert configuration
 │   └── ai-settings.json        # Agent settings
-├── data/                # Portfolio data (gitignored)
+├── data/                # Portfolio data
+│   ├── portfolio.json   # Portfolio state
+│   ├── positions.json   # Current holdings
+│   ├── trades.json      # Trade history
+│   └── watchlist.json   # Monitored stocks
+├── .mcp.json            # MCP server configuration
 ├── CLAUDE.md
 └── README.md
 ```

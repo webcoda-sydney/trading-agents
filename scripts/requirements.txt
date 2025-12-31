@@ -1,0 +1,23 @@
+# Trading Agents - Data Fetching Dependencies
+# Install: pip install -r scripts/requirements.txt
+
+# Core data providers
+yfinance>=0.2.50          # Yahoo Finance (free, no API key)
+pandas>=2.0.0             # Data manipulation
+numpy>=1.24.0             # Numerical operations
+
+# Technical analysis
+pandas-ta>=0.3.14b        # Technical indicators (RSI, MACD, Bollinger, etc.)
+
+# HTTP requests (for API providers)
+requests>=2.31.0          # HTTP client
+aiohttp>=3.9.0            # Async HTTP (for parallel fetching)
+
+# Optional: Premium data providers (require API keys)
+# alpha-vantage>=2.3.1    # Alpha Vantage client
+# finnhub-python>=2.4.19  # Finnhub client
+# twelvedata>=1.2.0       # Twelve Data client
+
+# Utilities
+python-dateutil>=2.8.2    # Date parsing
+pytz>=2024.1              # Timezone handling

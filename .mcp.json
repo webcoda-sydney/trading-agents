@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/anthropics/claude-code/main/schemas/mcp.schema.json",
+  "mcpServers": {
+    "comment": "Uncomment and configure the providers you want to use",
+
+    "finnhub": {
+      "disabled": true,
+      "command": "npx",
+      "args": ["-y", "mcp-finnhub"],
+      "env": {
+        "FINNHUB_API_KEY": "${FINNHUB_API_KEY}"
+      }
+    },
+
+    "polygon": {
+      "disabled": true,
+      "command": "npx",
+      "args": ["-y", "@anthropic/mcp-polygon"],
+      "env": {
+        "POLYGON_API_KEY": "${POLYGON_API_KEY}"
+      }
+    }
+  }
+}

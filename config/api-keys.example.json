@@ -1,0 +1,48 @@
+{
+  "_comment": "Copy this file to api-keys.json and fill in your API keys",
+  "_note": "api-keys.json is gitignored and will not be committed",
+
+  "alpha_vantage": {
+    "api_key": "YOUR_ALPHA_VANTAGE_KEY",
+    "tier": "free",
+    "daily_limit": 500,
+    "signup_url": "https://www.alphavantage.co/support/#api-key"
+  },
+
+  "finnhub": {
+    "api_key": "YOUR_FINNHUB_KEY",
+    "tier": "free",
+    "rate_limit": "60/minute",
+    "signup_url": "https://finnhub.io/register"
+  },
+
+  "twelve_data": {
+    "api_key": "YOUR_TWELVE_DATA_KEY",
+    "tier": "free",
+    "daily_limit": 800,
+    "signup_url": "https://twelvedata.com/register"
+  },
+
+  "polygon": {
+    "api_key": "YOUR_POLYGON_KEY",
+    "tier": "free",
+    "rate_limit": "5/minute",
+    "signup_url": "https://polygon.io/",
+    "note": "Free tier very limited, paid starts at $199/mo"
+  },
+
+  "fmp": {
+    "api_key": "YOUR_FMP_KEY",
+    "tier": "free",
+    "monthly_bandwidth": "500MB",
+    "signup_url": "https://financialmodelingprep.com/"
+  },
+
+  "tradier": {
+    "api_key": "YOUR_TRADIER_KEY",
+    "account_id": "YOUR_ACCOUNT_ID",
+    "environment": "sandbox",
+    "signup_url": "https://tradier.com/",
+    "note": "Requires brokerage account, supports live and paper trading"
+  }
+}

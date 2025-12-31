@@ -137,6 +137,12 @@ If using the ASX-specific paper trading system, these commands are available:
 git clone https://github.com/webcoda-sydney/trading-agents.git
 cd trading-agents
 
+# Set up your personal data files (one-time)
+cp data/portfolio.example.json data/portfolio.json
+cp data/positions.example.json data/positions.json
+cp data/trades.example.json data/trades.json
+cp data/watchlist.example.json data/watchlist.json
+
 # Install data fetching dependencies (optional but recommended)
 pip install -r scripts/requirements.txt
 
@@ -237,11 +243,12 @@ trading-agents/
 │   ├── api-keys.example.json   # API key template
 │   ├── alerts.json             # Alert configuration
 │   └── ai-settings.json        # Agent settings
-├── data/                # Portfolio data
-│   ├── portfolio.json   # Portfolio state
-│   ├── positions.json   # Current holdings
-│   ├── trades.json      # Trade history
-│   └── watchlist.json   # Monitored stocks
+├── data/                        # Portfolio data (personal files gitignored)
+│   ├── *.example.json           # Templates (copy these to get started)
+│   ├── portfolio.json           # Your portfolio state
+│   ├── positions.json           # Your holdings
+│   ├── trades.json              # Your trade history
+│   └── watchlist.json           # Your watchlist
 ├── .mcp.json            # MCP server configuration
 ├── CLAUDE.md
 └── README.md

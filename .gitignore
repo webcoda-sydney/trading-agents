@@ -1,23 +1,16 @@
-# Data files (personal portfolio state - gitignored for privacy)
-# Uncomment these lines if you don't want to track your portfolio
-# data/*.json
-# data/journal/
-# data/research/
-
-# Always ignore these folders
+# Data files (personal - never commit!)
+data/*.json
+data/journal/
+data/research/
 data/opinions/
-data/journal/entries/
 data/scan-results/
+
+# Keep example templates
+!data/*.example.json
+!data/.gitkeep
 
 # API keys (never commit!)
 config/api-keys.json
-
-# Keep sample/starter files
-!data/.gitkeep
-!data/portfolio.json
-!data/positions.json
-!data/trades.json
-!data/watchlist.json
 
 # Cache
 *.pyc

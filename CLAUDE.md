@@ -140,15 +140,26 @@ For real-time data and sentiment analysis, configure API keys:
 ## Key Data Files
 
 ```
-config/trading-rules.json      # Position limits, stop-loss rules
-config/screening-presets.json  # Stock screening criteria
-config/api-keys.json           # API keys (gitignored)
-data/portfolio.json            # Current portfolio state
-data/positions.json            # Current holdings
-data/watchlist.json            # Stocks being monitored
-data/trades.json               # Trade history
-scripts/                       # Data fetching scripts
-.claude/skills/                # Data fetching skills
+config/trading-rules.json       # Position limits, stop-loss rules
+config/screening-presets.json   # Stock screening criteria
+config/api-keys.json            # API keys (gitignored)
+data/portfolio.json             # Current portfolio state (gitignored)
+data/positions.json             # Current holdings (gitignored)
+data/watchlist.json             # Stocks being monitored (gitignored)
+data/trades.json                # Trade history (gitignored)
+data/*.example.json             # Templates for above files
+scripts/                        # Data fetching scripts
+.claude/skills/                 # Data fetching skills
+```
+
+### First-Time Setup
+
+Copy the example templates to create your personal data files:
+```bash
+cp data/portfolio.example.json data/portfolio.json
+cp data/positions.example.json data/positions.json
+cp data/trades.example.json data/trades.json
+cp data/watchlist.example.json data/watchlist.json
 ```
 
 ## Standards

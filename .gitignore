@@ -1,5 +1,6 @@
 # Data files (personal - never commit!)
 data/*.json
+data/briefings/
 data/journal/
 data/research/
 data/opinions/

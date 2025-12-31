@@ -1,0 +1,26 @@
+# Data files (contain portfolio state)
+data/*.json
+data/journal/
+data/research/
+!data/.gitkeep
+
+# Cache
+*.pyc
+__pycache__/
+.cache/
+
+# Environment
+.env
+.env.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log

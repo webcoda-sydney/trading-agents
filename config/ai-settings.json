@@ -1,0 +1,46 @@
+{
+  "briefing": {
+    "auto_generate": false,
+    "preferred_time": "07:00",
+    "include_sections": {
+      "market_snapshot": true,
+      "commodities": true,
+      "portfolio_impact": true,
+      "calendar": true,
+      "news": true,
+      "action_items": true,
+      "ai_insight": true
+    },
+    "detail_level": "standard"
+  },
+  "journal": {
+    "prompt_after_trade": true,
+    "auto_update_outcomes": true,
+    "weekly_review_day": "Sunday",
+    "coaching_style": "balanced"
+  },
+  "opinion": {
+    "required_before_trade": false,
+    "confidence_threshold": "medium",
+    "include_historical_trades": true,
+    "risk_tolerance": "moderate"
+  },
+  "news": {
+    "scan_frequency": "on_demand",
+    "sentiment_model": "ai_powered",
+    "news_sources": ["asx_announcements", "financial_news", "company_news"],
+    "lookback_days": 7
+  },
+  "ask": {
+    "verbose_responses": true,
+    "include_insights": true,
+    "suggest_actions": true
+  },
+  "general": {
+    "currency": "AUD",
+    "date_format": "DD/MM/YYYY",
+    "language": "Australian English",
+    "risk_profile": "moderate",
+    "investment_style": "value_with_growth"
+  }
+}

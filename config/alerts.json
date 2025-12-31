@@ -1,0 +1,35 @@
+{
+  "enabled": true,
+  "alert_types": {
+    "price_alerts": {
+      "enabled": true,
+      "stop_loss_warning": true,
+      "target_price_hit": true,
+      "watchlist_entry_price": true,
+      "unusual_move_threshold_pct": 5.0
+    },
+    "news_alerts": {
+      "enabled": true,
+      "material_announcements": true,
+      "earnings_releases": true,
+      "dividend_announcements": true,
+      "director_trades": true,
+      "broker_ratings": false
+    },
+    "portfolio_alerts": {
+      "enabled": true,
+      "sector_overweight": true,
+      "position_overweight": true,
+      "drawdown_warning_pct": 5.0,
+      "daily_loss_warning_pct": 2.0
+    },
+    "calendar_alerts": {
+      "enabled": true,
+      "earnings_upcoming_days": 7,
+      "ex_dividend_upcoming_days": 5,
+      "agm_upcoming_days": 14
+    }
+  },
+  "triggered_alerts": [],
+  "dismissed_alerts": []
+}

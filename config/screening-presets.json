@@ -1,0 +1,87 @@
+{
+  "presets": {
+    "value": {
+      "name": "Value Investing",
+      "description": "Undervalued stocks with strong fundamentals",
+      "criteria": {
+        "pe_ratio": {"max": 15},
+        "dividend_yield": {"min": 0.04},
+        "price_to_book": {"max": 1.5},
+        "market_cap": {"min": 500000000}
+      },
+      "sort_by": "dividend_yield",
+      "sort_order": "desc"
+    },
+    "growth": {
+      "name": "Growth Stocks",
+      "description": "High-growth companies with strong momentum",
+      "criteria": {
+        "revenue_growth": {"min": 0.15},
+        "roe": {"min": 0.15},
+        "pe_ratio": {"max": 40},
+        "market_cap": {"min": 1000000000}
+      },
+      "sort_by": "revenue_growth",
+      "sort_order": "desc"
+    },
+    "dividend": {
+      "name": "Dividend Champions",
+      "description": "High-yield dividend paying stocks",
+      "criteria": {
+        "dividend_yield": {"min": 0.05},
+        "payout_ratio": {"max": 0.85},
+        "market_cap": {"min": 1000000000}
+      },
+      "sort_by": "dividend_yield",
+      "sort_order": "desc"
+    },
+    "momentum": {
+      "name": "Momentum Plays",
+      "description": "Stocks near 52-week highs with strong volume",
+      "criteria": {
+        "pct_from_52w_high": {"max": 0.10},
+        "volume_ratio": {"min": 1.5},
+        "market_cap": {"min": 500000000}
+      },
+      "sort_by": "pct_from_52w_high",
+      "sort_order": "asc"
+    },
+    "quality": {
+      "name": "Quality Compounders",
+      "description": "High-quality businesses with low debt",
+      "criteria": {
+        "roe": {"min": 0.15},
+        "debt_to_equity": {"max": 0.5},
+        "current_ratio": {"min": 1.5},
+        "market_cap": {"min": 1000000000}
+      },
+      "sort_by": "roe",
+      "sort_order": "desc"
+    },
+    "bluechip": {
+      "name": "Blue Chip Safety",
+      "description": "Large, stable companies with dividends",
+      "criteria": {
+        "market_cap": {"min": 10000000000},
+        "dividend_yield": {"min": 0.02},
+        "beta": {"max": 1.2}
+      },
+      "sort_by": "market_cap",
+      "sort_order": "desc"
+    },
+    "smallcap_value": {
+      "name": "Small Cap Value",
+      "description": "Undervalued small companies",
+      "criteria": {
+        "market_cap": {"min": 100000000, "max": 2000000000},
+        "pe_ratio": {"max": 12},
+        "price_to_book": {"max": 1.0}
+      },
+      "sort_by": "pe_ratio",
+      "sort_order": "asc"
+    }
+  },
+  "default_preset": "value",
+  "max_results": 20,
+  "cache_duration_hours": 24
+}

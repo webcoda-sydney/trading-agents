@@ -1,0 +1,28 @@
+{
+  "position_sizing": {
+    "max_position_size_pct": 10.0,
+    "max_single_sector_pct": 30.0,
+    "min_cash_reserve_pct": 10.0,
+    "max_portfolio_positions": 20
+  },
+  "risk_management": {
+    "max_daily_loss_pct": 2.0,
+    "max_portfolio_loss_pct": 10.0,
+    "default_stop_loss_pct": 8.0,
+    "trailing_stop_enabled": true,
+    "trailing_stop_pct": 5.0
+  },
+  "trading_costs": {
+    "brokerage_fee_fixed": 19.95,
+    "brokerage_fee_pct": 0.0,
+    "minimum_trade_size": 500.00
+  },
+  "rebalancing": {
+    "frequency": "QUARTERLY",
+    "rebalance_threshold_pct": 5.0
+  },
+  "entry_rules": {
+    "require_research_completed": true,
+    "require_positive_technical_signal": false
+  }
+}
